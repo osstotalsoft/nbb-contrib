@@ -1,10 +1,12 @@
 ﻿// Copyright (c) TotalSoft.
 // This source code is licensed under the MIT license.
 
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,6 +16,17 @@ namespace NBB.Contrib.AspNet.HealthChecks
     {
         public static Task WriteResponse(HttpContext httpContext, HealthReport result)
         {
+            // only use this if json formatting is requested. This is needed for HealthCheckUi package to work
+            if (httpContext.Request.QueryString.HasValue)
+            {
+                var queryString = httpContext.Request.QueryString.Value;
+                queryString = queryString.Replace("?", "");
+                if (!"json".Equals(queryString, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return UIResponseWriter.WriteHealthCheckUIResponse(httpContext, result);
+                }
+            }
+
             httpContext.Response.ContentType = "application/json";
 
             var json = new JObject(

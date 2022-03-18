@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="$(AspnetHealthChecksPackageVersion)" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="$(MicrosoftAspNetCoreDiagnosticsHealthChecksPackageVersion)" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="$(MicrosoftDataSqlClientPackageVersion)" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="$(MicrosoftExtensionsPackagesVersion)" />

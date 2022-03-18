@@ -18,7 +18,7 @@ namespace NBB.Contrib.AspNet.HealthChecks.Extensions
                 ResultStatusCodes =
                 {
                     [HealthStatus.Healthy] = StatusCodes.Status200OK,
-                    [HealthStatus.Degraded] = StatusCodes.Status200OK,
+                    [HealthStatus.Degraded] = StatusCodes.Status500InternalServerError,
                     [HealthStatus.Unhealthy] = StatusCodes.Status503ServiceUnavailable
                 },
                 ResponseWriter = HealthCheckWriter.WriteResponse,
@@ -31,7 +31,7 @@ namespace NBB.Contrib.AspNet.HealthChecks.Extensions
                 ResultStatusCodes =
                 {
                     [HealthStatus.Healthy] = StatusCodes.Status200OK,
-                    [HealthStatus.Degraded] = StatusCodes.Status200OK,
+                    [HealthStatus.Degraded] = StatusCodes.Status500InternalServerError,
                     [HealthStatus.Unhealthy] = StatusCodes.Status503ServiceUnavailable
                 },
                 ResponseWriter = HealthCheckWriter.WriteResponse,

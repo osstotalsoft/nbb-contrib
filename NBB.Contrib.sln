@@ -34,6 +34,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBB.Contrib.Sample.Integrat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBB.Contrib.Sample.Tests", "test\UnitTests\NBB.Contrib.Sample.Tests\NBB.Contrib.Sample.Tests.csproj", "{2C090EE7-360E-4630-8CA5-FF49CC079688}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBB.Contrib.AspNet.HealthChecksWatcher", "src\AspNet\HealthChecksWatcher\ConsoleApp1\NBB.Contrib.AspNet.HealthChecksWatcher.csproj", "{8327B3EE-CB29-44B5-80AF-88FE10A45493}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{2C090EE7-360E-4630-8CA5-FF49CC079688}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C090EE7-360E-4630-8CA5-FF49CC079688}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C090EE7-360E-4630-8CA5-FF49CC079688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8327B3EE-CB29-44B5-80AF-88FE10A45493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8327B3EE-CB29-44B5-80AF-88FE10A45493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8327B3EE-CB29-44B5-80AF-88FE10A45493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8327B3EE-CB29-44B5-80AF-88FE10A45493}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{83754F81-37D1-4FE7-8029-92878CE970E4} = {12353024-24B5-42D3-A5E6-A519E81185F0}
 		{E6EE3FCE-1E9E-4FBA-A6EF-6FB87BE6BDDD} = {AF781B9A-0B05-4396-91B0-208F5286E740}
 		{2C090EE7-360E-4630-8CA5-FF49CC079688} = {83754F81-37D1-4FE7-8029-92878CE970E4}
+		{8327B3EE-CB29-44B5-80AF-88FE10A45493} = {4071A68C-2B9A-4552-AE41-96BBE6B55A91}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A719D9C-6084-4C57-AD1D-20CF9DFF9017}

@@ -8,6 +8,10 @@
         <MicrosoftNetTestSdkPackageVersion>17.0.0</MicrosoftNetTestSdkPackageVersion>
         <MoqPackageVersion>4.15.2</MoqPackageVersion>
         <NBBPackagesVersion>6.0.10</NBBPackagesVersion>
+        <SerilogPackageVersion>2.10.0</SerilogPackageVersion>
+        <SerilogExtensionsLoggingPackageVersion>3.1.0</SerilogExtensionsLoggingPackageVersion>
+        <SerilogAspNetCorePackageVersion>4.1.0</SerilogAspNetCorePackageVersion>
+        <SerilogSinksConsolePackageVersion>4.0.1</SerilogSinksConsolePackageVersion>
         <XunitPackageVersion>2.4.1</XunitPackageVersion>
         <XunitRunnerVisualStudioPackageVersion>2.4.3</XunitRunnerVisualStudioPackageVersion>
     </PropertyGroup>
