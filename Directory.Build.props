@@ -1,9 +1,24 @@
 <Project>
-  <Import Project="dependencies.props" />
-  <PropertyGroup>
-    <Version>$(GitVersion_NuGetVersion)</Version>
-    <Authors>Totalsoft</Authors>
-    <Company>Totalsoft</Company>
-    <PackageTags>totalsoft charisma</PackageTags>
-  </PropertyGroup>
+    <Import Project="dependencies.props" />
+    <PropertyGroup>
+        <Authors>Totalsoft</Authors>
+        <Company>Totalsoft</Company>
+        <PackageTags>totalsoft nbb contrib</PackageTags>
+        <LangVersion>latest</LangVersion>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <LicenseFile>$(MSBuildThisFileDirectory)LICENSE</LicenseFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageIcon>icon.png</PackageIcon>
+        <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+        <MinVerTagPrefix>v</MinVerTagPrefix>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+        <PackageReference Include="MinVer" Version="2.5.0" PrivateAssets="All"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="$(MSBuildThisFileDirectory)\assets\img\icon.png" Pack="true" PackagePath=""/>
+    </ItemGroup>
 </Project>
