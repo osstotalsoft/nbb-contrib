@@ -22,6 +22,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNet", "AspNet", "{4071A6
 		src\AspNet\README.md = src\AspNet\README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D155AD1A-57F2-41FB-A9BB-75D2E9400273}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{12353024-24B5-42D3-A5E6-A519E81185F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{AF781B9A-0B05-4396-91B0-208F5286E740}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{83754F81-37D1-4FE7-8029-92878CE970E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBB.Contrib.Sample.IntegrationTests", "test\Integration\NBB.Contrib.Sample.IntegrationTests\NBB.Contrib.Sample.IntegrationTests.csproj", "{E6EE3FCE-1E9E-4FBA-A6EF-6FB87BE6BDDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBB.Contrib.Sample.Tests", "test\UnitTests\NBB.Contrib.Sample.Tests\NBB.Contrib.Sample.Tests.csproj", "{2C090EE7-360E-4630-8CA5-FF49CC079688}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,12 +44,25 @@ Global
 		{59316523-2087-4456-9BC9-57CA3FE9FBE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59316523-2087-4456-9BC9-57CA3FE9FBE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59316523-2087-4456-9BC9-57CA3FE9FBE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6EE3FCE-1E9E-4FBA-A6EF-6FB87BE6BDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6EE3FCE-1E9E-4FBA-A6EF-6FB87BE6BDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6EE3FCE-1E9E-4FBA-A6EF-6FB87BE6BDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6EE3FCE-1E9E-4FBA-A6EF-6FB87BE6BDDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C090EE7-360E-4630-8CA5-FF49CC079688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C090EE7-360E-4630-8CA5-FF49CC079688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C090EE7-360E-4630-8CA5-FF49CC079688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C090EE7-360E-4630-8CA5-FF49CC079688}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{59316523-2087-4456-9BC9-57CA3FE9FBE9} = {4071A68C-2B9A-4552-AE41-96BBE6B55A91}
+		{4071A68C-2B9A-4552-AE41-96BBE6B55A91} = {D155AD1A-57F2-41FB-A9BB-75D2E9400273}
+		{AF781B9A-0B05-4396-91B0-208F5286E740} = {12353024-24B5-42D3-A5E6-A519E81185F0}
+		{83754F81-37D1-4FE7-8029-92878CE970E4} = {12353024-24B5-42D3-A5E6-A519E81185F0}
+		{E6EE3FCE-1E9E-4FBA-A6EF-6FB87BE6BDDD} = {AF781B9A-0B05-4396-91B0-208F5286E740}
+		{2C090EE7-360E-4630-8CA5-FF49CC079688} = {83754F81-37D1-4FE7-8029-92878CE970E4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A719D9C-6084-4C57-AD1D-20CF9DFF9017}

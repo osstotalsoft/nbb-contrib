@@ -1,9 +1,14 @@
 <Project>
 	<PropertyGroup Label="Package Versions">
-		<AspnetHealthChecksPackageVersion>6.0.2</AspnetHealthChecksPackageVersion>
-		<MicrosoftAspNetCoreDiagnosticsHealthChecksPackageVersion>2.2.0</MicrosoftAspNetCoreDiagnosticsHealthChecksPackageVersion>
-		<MicrosoftDataSqlClientPackageVersion>4.1.0</MicrosoftDataSqlClientPackageVersion>
-		<MicrosoftExtensionsPackagesVersion>6.0.0</MicrosoftExtensionsPackagesVersion>
-		<NBBPackagesVersion>6.0.10</NBBPackagesVersion>
-	</PropertyGroup>
+        <AspnetHealthChecksPackageVersion>6.0.2</AspnetHealthChecksPackageVersion>
+        <FluentAssertionsPackageVersion>6.3.0</FluentAssertionsPackageVersion>
+        <MicrosoftAspNetCoreDiagnosticsHealthChecksPackageVersion>2.2.0</MicrosoftAspNetCoreDiagnosticsHealthChecksPackageVersion>
+        <MicrosoftDataSqlClientPackageVersion>4.1.0</MicrosoftDataSqlClientPackageVersion>
+        <MicrosoftExtensionsPackagesVersion>6.0.0</MicrosoftExtensionsPackagesVersion>
+        <MicrosoftNetTestSdkPackageVersion>17.0.0</MicrosoftNetTestSdkPackageVersion>
+        <MoqPackageVersion>4.15.2</MoqPackageVersion>
+        <NBBPackagesVersion>6.0.10</NBBPackagesVersion>
+        <XunitPackageVersion>2.4.1</XunitPackageVersion>
+        <XunitRunnerVisualStudioPackageVersion>2.4.3</XunitRunnerVisualStudioPackageVersion>
+    </PropertyGroup>
 </Project>
