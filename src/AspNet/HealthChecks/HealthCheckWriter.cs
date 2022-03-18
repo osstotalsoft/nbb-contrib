@@ -26,7 +26,10 @@ namespace NBB.Contrib.AspNet.HealthChecks
                     return UIResponseWriter.WriteHealthCheckUIResponse(httpContext, result);
                 }
             }
-
+            else
+            {
+                return UIResponseWriter.WriteHealthCheckUIResponse(httpContext, result);
+            }
             httpContext.Response.ContentType = "application/json";
 
             var json = new JObject(
