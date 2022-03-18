@@ -1,0 +1,9 @@
+<Project>
+	<PropertyGroup Label="Package Versions">
+		<AspnetHealthChecksPackageVersion>6.0.2</AspnetHealthChecksPackageVersion>
+		<MicrosoftAspNetCoreDiagnosticsHealthChecksPackageVersion>2.2.0</MicrosoftAspNetCoreDiagnosticsHealthChecksPackageVersion>
+		<MicrosoftDataSqlClientPackageVersion>4.1.0</MicrosoftDataSqlClientPackageVersion>
+		<MicrosoftExtensionsPackagesVersion>6.0.0</MicrosoftExtensionsPackagesVersion>
+		<NBBPackagesVersion>6.0.10</NBBPackagesVersion>
+	</PropertyGroup>
+</Project>
