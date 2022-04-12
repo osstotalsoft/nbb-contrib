@@ -1,6 +1,7 @@
 ﻿// Copyright (c) TotalSoft.
 // This source code is licensed under the MIT license.
 
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,13 @@ namespace NBB.Contrib.AspNet.HealthChecks.Probes
 {
     public class GCInfoHealthCheck : IHealthCheck
     {
+        private readonly IConfiguration _configuration;
+
+        public GCInfoHealthCheck(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         public string Name { get; } = "GCInfo";
 
         public Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = new CancellationToken())
@@ -41,14 +49,14 @@ namespace NBB.Contrib.AspNet.HealthChecks.Probes
                 { "TotalAvailableMemoryBytes", memoryInfo.TotalAvailableMemoryBytes },
                 { "TotalCommittedBytes", memoryInfo.TotalCommittedBytes },
             };
-
-            // Report degraded status if the allocated memory is >= 1gb (in bytes)
-            var status = allocated >= 1024 * 1024 * 1024 ? HealthStatus.Degraded : HealthStatus.Healthy;
+            var limit = _configuration.GetValue<double>("HealthChecks:AllocatedMemoryLimit", 1024 * 1024 * 1024);
+            var status = allocated >= limit ? HealthStatus.Degraded : HealthStatus.Healthy;
+            var limitGb = limit / 1024.0 / 1024.0 / 1024.0;
 
             return Task.FromResult(new HealthCheckResult(
                 status,
                 exception: null,
-                description: "reports degraded status if allocated bytes >= 1gb",
+                description: $"Reports degraded status if allocated bytes >= {limitGb:##.##} Gb",
                 data: data));
         }
     }
