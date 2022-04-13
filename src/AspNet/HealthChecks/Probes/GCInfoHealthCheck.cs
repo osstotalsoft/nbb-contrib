@@ -49,9 +49,9 @@ namespace NBB.Contrib.AspNet.HealthChecks.Probes
                 { "TotalAvailableMemoryBytes", memoryInfo.TotalAvailableMemoryBytes },
                 { "TotalCommittedBytes", memoryInfo.TotalCommittedBytes },
             };
-            var limit = _configuration.GetValue<double>("HealthChecks:AllocatedMemoryLimit", 1024 * 1024 * 1024);
-            var status = allocated >= limit ? HealthStatus.Degraded : HealthStatus.Healthy;
-            var limitGb = limit / 1024.0 / 1024.0 / 1024.0;
+            var limit = _configuration.GetValue<double>("HealthChecks:AllocatedMemoryLimit", 500);
+            var status = allocated >= limit * 1024 * 1024 ? HealthStatus.Degraded : HealthStatus.Healthy;
+            var limitGb = limit / 1024.0;
 
             return Task.FromResult(new HealthCheckResult(
                 status,
